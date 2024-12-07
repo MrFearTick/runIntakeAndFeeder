@@ -1,5 +1,5 @@
 // Intake and Feeder Motor Test
-// Version 1
+// Version 1.11
 
 package frc.robot;
 
@@ -22,8 +22,8 @@ public class RobotContainer {
   }
 
   private void configureBindings() {
-    new JoystickButton(ps5, 1).whileTrue(new intaking(intakeKraken, 0.7, feederKraken, 1));
-    new JoystickButton(ps5, 2).whileTrue(new intaking(intakeKraken, -0.7, feederKraken, -1));
+    new JoystickButton(ps5, 1).whileTrue(new intaking(intakeKraken, 1, feederKraken, 0.7));
+    new JoystickButton(ps5, 2).whileTrue(new intaking(intakeKraken, -1, feederKraken, -0.7));
   }
 
   public Command getAutonomousCommand() {
